@@ -1,0 +1,9 @@
+com\zzz\springcloud\entity\Payment.class
+com\zzz\springcloud\base\BaseEntity.class
+com\zzz\springcloud\CodeGenerator.class
+com\zzz\springcloud\controller\PaymentController.class
+com\zzz\springcloud\PaymentServer.class
+com\zzz\springcloud\mapper\PaymentMapper.class
+com\zzz\springcloud\service\IPaymentService.class
+com\zzz\springcloud\service\impl\PaymentServiceImpl.class
+com\zzz\springcloud\common\CommonResult.class
