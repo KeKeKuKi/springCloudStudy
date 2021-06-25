@@ -1,6 +1,0 @@
-com\zzz\springcloud\payment\mapper\PaymentMapper.class
-com\zzz\springcloud\payment\service\impl\PaymentServiceImpl.class
-com\zzz\springcloud\payment\PaymentServer.class
-com\zzz\springcloud\payment\controller\PaymentController.class
-com\zzz\springcloud\payment\CodeGenerator.class
-com\zzz\springcloud\payment\service\IPaymentService.class
