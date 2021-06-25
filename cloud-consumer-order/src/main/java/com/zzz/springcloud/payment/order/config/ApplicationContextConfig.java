@@ -16,6 +16,7 @@ import org.springframework.web.client.RestTemplate;
 public class ApplicationContextConfig {
 
     @Bean
+    // 开启负载均衡
     @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();

@@ -7,8 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cloud-provider-payment-for-eureka" />
         <module name="cloud-eureka-server01" />
-        <module name="cloud-provider-payment" />
         <module name="cloud-commons" />
         <module name="cloud-consumer-order" />
       </profile>
