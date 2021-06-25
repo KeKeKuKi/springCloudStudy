@@ -7,14 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cloud-consumer-order-from-zookeeper" />
+        <module name="cloud-consumer-order-from-eureka" />
         <module name="cloud-provider-payment-for-eureka" />
+        <module name="cloud-consumer-order-from-consul" />
+        <module name="cloud-provider-payment-for-zookeeper" />
         <module name="cloud-eureka-server01" />
         <module name="cloud-commons" />
-        <module name="cloud-consumer-order" />
+        <module name="cloud-provider-payment-for-consul" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="cloud-eureka-server02" target="8" />
+    <bytecodeTargetLevel>
+      <module name="cloud-commons" target="8" />
+      <module name="cloud-consumer-order-from-consul" target="8" />
+      <module name="cloud-consumer-order-from-eureka" target="8" />
+      <module name="cloud-consumer-order-from-zookeeper" target="8" />
+      <module name="cloud-eureka-server01" target="8" />
+      <module name="cloud-provider-payment-for-consul" target="8" />
+      <module name="cloud-provider-payment-for-eureka" target="8" />
+      <module name="cloud-provider-payment-for-zookeeper" target="8" />
+      <module name="spring-cloud-parent" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

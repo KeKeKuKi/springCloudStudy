@@ -10,9 +10,14 @@
 
     <modules>
         <module>cloud-provider-payment-for-eureka</module>
-        <module>cloud-consumer-order</module>
+        <module>cloud-consumer-order-from-eureka</module>
         <module>cloud-commons</module>
         <module>cloud-eureka-server01</module>
+        <module>untitled</module>
+        <module>cloud-provider-payment-for-zookeeper</module>
+        <module>cloud-consumer-order-from-zookeeper</module>
+        <module>cloud-provider-payment-for-consul</module>
+        <module>cloud-consumer-order-from-consul</module>
     </modules>
 
     <packaging>pom</packaging>

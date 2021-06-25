@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloud-commons/cloud-commons.iml" filepath="$PROJECT_DIR$/cloud-commons/cloud-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order-from-consul/cloud-consumer-order-from-consul.iml" filepath="$PROJECT_DIR$/cloud-consumer-order-from-consul/cloud-consumer-order-from-consul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order-from-eureka/cloud-consumer-order-from-eureka.iml" filepath="$PROJECT_DIR$/cloud-consumer-order-from-eureka/cloud-consumer-order-from-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order-from-zookeeper/cloud-consumer-order-from-zookeeper.iml" filepath="$PROJECT_DIR$/cloud-consumer-order-from-zookeeper/cloud-consumer-order-from-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server01/cloud-eureka-server01.iml" filepath="$PROJECT_DIR$/cloud-eureka-server01/cloud-eureka-server01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment-for-consul/cloud-provider-payment-for-consul.iml" filepath="$PROJECT_DIR$/cloud-provider-payment-for-consul/cloud-provider-payment-for-consul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment-for-eureka/cloud-provider-payment-for-eureka.iml" filepath="$PROJECT_DIR$/cloud-provider-payment-for-eureka/cloud-provider-payment-for-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment-for-zookeeper/cloud-provider-payment-for-zookeeper.iml" filepath="$PROJECT_DIR$/cloud-provider-payment-for-zookeeper/cloud-provider-payment-for-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-parent.iml" filepath="$PROJECT_DIR$/spring-cloud-parent.iml" />
+    </modules>
+  </component>
+</project>

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-provider-pyment
+    name: cloud-provider-pyment-for-eureka
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
