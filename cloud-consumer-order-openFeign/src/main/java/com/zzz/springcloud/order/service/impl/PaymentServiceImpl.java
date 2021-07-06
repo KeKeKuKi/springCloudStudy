@@ -1,4 +1,4 @@
-package com.zzz.springcloud.order.controller;
+package com.zzz.springcloud.order.service.impl;
 
 import com.zzz.cloud.common.common.CommonResult;
 import com.zzz.springcloud.order.service.PaymentService;
@@ -7,15 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ *  例子仅用于测试，正常使用为以上controller操作
+ */
 @RestController
-@RequestMapping("/consumer1")
-public class OrderFeignController {
-
+@RequestMapping("/consumer")
+public class PaymentServiceImpl implements PaymentService {
     @Resource
     PaymentService paymentService;
 
-    @RequestMapping("/payment/list1")
-    CommonResult<Object> list(){
+    @Override
+    public CommonResult<Object> list() {
         return paymentService.list();
     }
 }
