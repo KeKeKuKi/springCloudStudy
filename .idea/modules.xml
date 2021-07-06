@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order-from-consul/cloud-consumer-order-from-consul.iml" filepath="$PROJECT_DIR$/cloud-consumer-order-from-consul/cloud-consumer-order-from-consul.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order-from-eureka/cloud-consumer-order-from-eureka.iml" filepath="$PROJECT_DIR$/cloud-consumer-order-from-eureka/cloud-consumer-order-from-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order-from-zookeeper/cloud-consumer-order-from-zookeeper.iml" filepath="$PROJECT_DIR$/cloud-consumer-order-from-zookeeper/cloud-consumer-order-from-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-consumer-order-openFeign/cloud-consumer-order-openFeign.iml" filepath="$PROJECT_DIR$/cloud-consumer-order-openFeign/cloud-consumer-order-openFeign.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server01/cloud-eureka-server01.iml" filepath="$PROJECT_DIR$/cloud-eureka-server01/cloud-eureka-server01.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment-for-consul/cloud-provider-payment-for-consul.iml" filepath="$PROJECT_DIR$/cloud-provider-payment-for-consul/cloud-provider-payment-for-consul.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment-for-eureka/cloud-provider-payment-for-eureka.iml" filepath="$PROJECT_DIR$/cloud-provider-payment-for-eureka/cloud-provider-payment-for-eureka.iml" />

@@ -12,6 +12,7 @@
         <module name="cloud-provider-payment-for-eureka" />
         <module name="cloud-consumer-order-from-consul" />
         <module name="cloud-provider-payment-for-zookeeper" />
+        <module name="cloud-consumer-order-openFeign" />
         <module name="cloud-eureka-server01" />
         <module name="cloud-commons" />
         <module name="cloud-provider-payment-for-consul" />
@@ -22,6 +23,7 @@
       <module name="cloud-consumer-order-from-consul" target="8" />
       <module name="cloud-consumer-order-from-eureka" target="8" />
       <module name="cloud-consumer-order-from-zookeeper" target="8" />
+      <module name="cloud-consumer-order-openFeign" target="8" />
       <module name="cloud-eureka-server01" target="8" />
       <module name="cloud-provider-payment-for-consul" target="8" />
       <module name="cloud-provider-payment-for-eureka" target="8" />

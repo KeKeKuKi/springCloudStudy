@@ -1,0 +1,24 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-order-from-eureka
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/order?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.zzz.springcloud.com.zzz.cloud.common.entity
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:7002/eureka
