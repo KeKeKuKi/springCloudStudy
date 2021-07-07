@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
@@ -42,7 +43,8 @@ public class PaymentController {
 
 
     @GetMapping("list")
-    public CommonResult<Object> list(){
+    public CommonResult<Object> list() throws InterruptedException {
+        TimeUnit.SECONDS.sleep(3);
         return new CommonResult<>().ofSuccess(paymentService.list());
     }
 }

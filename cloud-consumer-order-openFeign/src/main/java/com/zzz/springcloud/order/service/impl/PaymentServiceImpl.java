@@ -18,6 +18,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public CommonResult<Object> list() {
+        // 超时控制，ribbon默认1秒钟超时，开启超时控制在yml配置中
         return paymentService.list();
     }
 }

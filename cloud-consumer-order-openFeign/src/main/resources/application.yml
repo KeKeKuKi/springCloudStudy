@@ -22,3 +22,14 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:7002/eureka
+
+ribbon:
+  # 指建立连接的时间，网络正常情况下两端建立连接的时间
+  ReadTimeout: 5000
+  # 指建立连接后从服务端读取资源所用时间
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    # feign以什么日志级别检测什么接口
+    com.zzz.springcloud.order.service.PaymentService: debug
