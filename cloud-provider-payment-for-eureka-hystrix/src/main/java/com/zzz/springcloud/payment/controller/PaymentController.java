@@ -1,17 +1,17 @@
 package com.zzz.springcloud.payment.controller;
 
+import com.netflix.hystrix.HystrixCommandProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.zzz.cloud.common.common.CommonResult;
 import com.zzz.springcloud.payment.service.IPaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -41,6 +41,9 @@ public class PaymentController {
         return new CommonResult<>().ofSuccess(paymentService.list());
     }
 
+    /**
+     * 服务降级测试接口
+     */
     @HystrixCommand(fallbackMethod = "listSometimesErrorHandler", commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")
     })
@@ -55,4 +58,31 @@ public class PaymentController {
     public CommonResult<Object> listSometimesErrorHandler() {
         return new CommonResult<>().ofSuccess("paymentService.list() 调用异常，降级响应！" ) ;
     }
+
+    /**
+     * 服务熔断接口
+     */
+    @HystrixCommand(fallbackMethod = "fuseTestFallCbackfuseTestFallCback", commandProperties = {
+            // 时间窗口期内，请求次数失败次数比例达到多少百分比就熔断
+            // 所有配置参数记录在 HystrixCommandProperties 类下
+            @HystrixProperty(name = "circuitBreaker.enable", value = "true"), // 开启服务熔断
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"), // 请求次数
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"), // 时间窗口
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60") // 失败率达到多少跳闸
+
+    })
+    @GetMapping("/fuseTestfuseTest/{id}")
+    public CommonResult<String> fuseTest(@RequestParam("id") Integer id){
+
+        String s = UUID.randomUUID().toString();
+        if(id > 0){
+            throw new RuntimeException(s + "调用失败！");
+        }
+        return CommonResult.ofSuccess(s + "服务正常");
+    }
+    public CommonResult<String> fuseTestFallCback(@PathVariable("id") Integer id){
+
+        return CommonResult.ofSuccess("服务异常，服务降级");
+    }
+
 }
