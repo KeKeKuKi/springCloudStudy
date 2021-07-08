@@ -29,11 +29,11 @@ public class CommonResult <T>{
         this.mes = mes;
     }
 
-    public CommonResult<T> ofSuccess(T data){
+    public static <T> CommonResult<T> ofSuccess(T data){
         return new CommonResult<T>(200, true, "成功", data);
     }
 
-    public CommonResult<T> ofFail(String mes){
+    public static <T> CommonResult<T> ofFail(String mes){
         return new CommonResult<>(500, false, mes, null);
     }
 }

@@ -3,12 +3,12 @@ server:
 
 spring:
   application:
-    name: cloud-consumer-com.zzz.springcloud.order-from-eureka
+    name: cloud-consumer-order-from-eureka
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/com.zzz.springcloud.order?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      url: jdbc:mysql://localhost:3306/order?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: root
       password: 123456
 
@@ -21,15 +21,20 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://127.0.0.1:7002/eureka
+      defaultZone: http://127.0.0.1:7001/eureka
 
 ribbon:
   # 指建立连接的时间，网络正常情况下两端建立连接的时间
-  ReadTimeout: 5000
+  ReadTimeout: 10000
   # 指建立连接后从服务端读取资源所用时间
-  ConnectTimeout: 5000
+  ConnectTimeout: 10000
 
 logging:
   level:
     # feign以什么日志级别检测什么接口
     com.zzz.springcloud.order.service.PaymentService: debug
+
+feign:
+  hystrix:
+    # 开启豪猪哥支持
+    enabled: true

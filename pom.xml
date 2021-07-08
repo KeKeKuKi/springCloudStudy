@@ -18,6 +18,9 @@
         <module>cloud-provider-payment-for-consul</module>
         <module>cloud-consumer-order-from-consul</module>
         <module>cloud-consumer-order-openFeign</module>
+        <module>cloud-provider-payment-for-eureka-hystrix</module>
+        <module>cloud-consumer-order-from-eureka-openfegin-hystrix</module>
+        <module>cloud-consumer-order-from-eureka-openfegin-hystrix-V2</module>
     </modules>
 
     <packaging>pom</packaging>

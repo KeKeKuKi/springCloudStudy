@@ -58,7 +58,7 @@ public class CodeGenerator {
         gc.setAuthor("ZhaoZezhong");
         //路径,默认为 D:\
         String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir(projectPath + "/cloud-consumer-order/src/main/java");
+        gc.setOutputDir(projectPath + "/cloud-consumer-com.zzz.springcloud.order/src/main/java");
         // XML ResultMap
         gc.setBaseResultMap(true);
         // XML column List
@@ -76,7 +76,7 @@ public class CodeGenerator {
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
-        dsc.setUrl("jdbc:mysql://localhost:3306/order?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useSSL=true");
+        dsc.setUrl("jdbc:mysql://localhost:3306/com.zzz.springcloud.order?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useSSL=true");
         mpg.setDataSource(dsc);
 
         // 策略配置
@@ -92,7 +92,7 @@ public class CodeGenerator {
 //        strategy.setTablePrefix("t_");
 
         //设置继承基类
-        strategy.setSuperEntityClass("com.zzz.springcloud.order.com.zzz.cloud.common.base.BaseEntity");
+        strategy.setSuperEntityClass("com.zzz.springcloud.com.zzz.springcloud.order.com.zzz.cloud.common.base.BaseEntity");
         //字段注释
         strategy.setEntityTableFieldAnnotationEnable(true);
         //数据表命名策略
@@ -104,7 +104,7 @@ public class CodeGenerator {
         mpg.setStrategy(strategy);
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.zzz.springcloud.order");
+        pc.setParent("com.zzz.springcloud.com.zzz.springcloud.order");
         mpg.setPackageInfo(pc);
         // 执行生成
         mpg.execute();

@@ -11,8 +11,9 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    service-url:
-      defaultZone: http://eureka02.com:7002/eureka
+    # 配置集群守望
+#    service-url:
+#      defaultZone: http://eureka02.com:7002/eureka
 spring:
   application:
     name: cloud-eureka-server01
