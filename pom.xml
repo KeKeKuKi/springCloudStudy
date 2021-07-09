@@ -21,6 +21,8 @@
         <module>cloud-provider-payment-for-eureka-hystrix</module>
         <module>cloud-consumer-order-from-eureka-openfegin-hystrix</module>
         <module>cloud-consumer-order-from-eureka-openfegin-hystrix-V2</module>
+        <module>cloud-hystrix-admin</module>
+        <module>cloud-gateaway</module>
     </modules>
 
     <packaging>pom</packaging>

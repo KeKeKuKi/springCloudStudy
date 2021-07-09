@@ -1,0 +1,32 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateaway
+  cloud:
+    gateway:
+      routes:
+        - id: paymentList
+          uri: http://localhost:8001
+          predicates:
+            - Path=/payment/**
+
+eureka:
+  instance:
+    # 设置服务显示名称
+    instance-id: payment01
+    # 开启IP显示
+    prefer-ip-address: true
+    # 发送心跳间隔（秒）
+    lease-renewal-interval-in-seconds: 5
+    # 服务器收到最后一次心跳等待时间上限（秒）
+    lease-expiration-duration-in-seconds: 10
+
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+#      defaultZone: http://localhost:7001/eureka
+

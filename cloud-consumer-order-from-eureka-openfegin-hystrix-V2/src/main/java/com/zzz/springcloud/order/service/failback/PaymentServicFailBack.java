@@ -15,11 +15,16 @@ import org.springframework.stereotype.Component;
 public class PaymentServicFailBack implements PaymentService {
     @Override
     public CommonResult<Object> list() {
-        return CommonResult.ofSuccess("list-服务降级");
+        return CommonResult.ofSuccess("list-客户端服务降级");
     }
 
     @Override
     public CommonResult<Object> listSometimesError() {
-        return CommonResult.ofSuccess("listSometimesError 服务降级");
+        return CommonResult.ofSuccess("listSometimesError 客户端服务降级");
+    }
+
+    @Override
+    public CommonResult<String> fuseTest(Integer id) {
+        return CommonResult.ofSuccess("fuseTest 客户端服务降级");
     }
 }

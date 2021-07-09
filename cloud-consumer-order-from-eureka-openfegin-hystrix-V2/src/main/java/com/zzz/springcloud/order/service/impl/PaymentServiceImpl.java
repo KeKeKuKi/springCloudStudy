@@ -30,4 +30,9 @@ public class PaymentServiceImpl implements PaymentService {
         return paymentService.listSometimesError();
     }
 
+    @Override
+    public CommonResult<String> fuseTest(Integer id) {
+        return paymentService.fuseTest(id);
+    }
+
 }

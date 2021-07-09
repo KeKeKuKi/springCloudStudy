@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-consumer-order-from-eureka
+    name: cloud-consumer-order-from-eureka-openfegin-hystrix-v2
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:

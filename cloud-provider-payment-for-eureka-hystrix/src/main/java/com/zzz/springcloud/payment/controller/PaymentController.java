@@ -62,26 +62,24 @@ public class PaymentController {
     /**
      * 服务熔断接口
      */
-    @HystrixCommand(fallbackMethod = "fuseTestFallCbackfuseTestFallCback", commandProperties = {
+    @HystrixCommand(fallbackMethod = "fuseTestFallBack", commandProperties = {
             // 时间窗口期内，请求次数失败次数比例达到多少百分比就熔断
             // 所有配置参数记录在 HystrixCommandProperties 类下
-            @HystrixProperty(name = "circuitBreaker.enable", value = "true"), // 开启服务熔断
-            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"), // 请求次数
+            @HystrixProperty(name = "circuitBreaker.enabled", value = "true"), // 开启服务熔断
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "5"), // 请求次数
             @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"), // 时间窗口
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60") // 失败率达到多少跳闸
 
     })
     @GetMapping("/fuseTestfuseTest/{id}")
-    public CommonResult<String> fuseTest(@RequestParam("id") Integer id){
-
+    public CommonResult<String> fuseTest(@PathVariable("id") Integer id){
         String s = UUID.randomUUID().toString();
         if(id > 0){
             throw new RuntimeException(s + "调用失败！");
         }
         return CommonResult.ofSuccess(s + "服务正常");
     }
-    public CommonResult<String> fuseTestFallCback(@PathVariable("id") Integer id){
-
+    public CommonResult<String> fuseTestFallBack(@PathVariable("id") Integer id){
         return CommonResult.ofSuccess("服务异常，服务降级");
     }
 
