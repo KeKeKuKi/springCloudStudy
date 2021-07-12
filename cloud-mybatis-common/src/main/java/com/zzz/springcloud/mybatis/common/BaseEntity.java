@@ -1,7 +1,5 @@
-package com.zzz.cloud.common.base;
+package com.zzz.springcloud.mybatis.common;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -15,7 +13,4 @@ import java.io.Serializable;
  */
 @Data
 public class BaseEntity implements Serializable {
-
-    @TableId(value = "id",type = IdType.AUTO)
-    private Long id;
 }

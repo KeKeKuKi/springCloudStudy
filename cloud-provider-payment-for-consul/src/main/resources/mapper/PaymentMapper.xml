@@ -3,7 +3,7 @@
 <mapper namespace="com.zzz.springcloud.payment.mapper.PaymentMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.zzz.cloud.common.entity.Payment">
+    <resultMap id="BaseResultMap" type="com.zzz.springcloud.payment.entity.Payment">
         <result column="id" property="id" />
         <result column="serial" property="serial" />
     </resultMap>

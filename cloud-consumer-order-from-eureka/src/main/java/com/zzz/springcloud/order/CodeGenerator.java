@@ -92,7 +92,7 @@ public class CodeGenerator {
 //        strategy.setTablePrefix("t_");
 
         //设置继承基类
-        strategy.setSuperEntityClass("com.zzz.springcloud.com.zzz.springcloud.order.com.zzz.cloud.common.base.BaseEntity");
+        strategy.setSuperEntityClass("com.zzz.springcloud.com.zzz.springcloud.order.com.zzz.springcloud.mybatis.common.BaseEntity");
         //字段注释
         strategy.setEntityTableFieldAnnotationEnable(true);
         //数据表命名策略

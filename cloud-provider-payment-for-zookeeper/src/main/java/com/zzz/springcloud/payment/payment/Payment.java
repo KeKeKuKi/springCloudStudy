@@ -1,8 +1,8 @@
-package com.zzz.cloud.common.entity;
+package com.zzz.springcloud.payment.payment;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.zzz.cloud.common.base.BaseEntity;
+import com.zzz.springcloud.mybatis.common.BaseEntity;
 import lombok.Data;
 
 

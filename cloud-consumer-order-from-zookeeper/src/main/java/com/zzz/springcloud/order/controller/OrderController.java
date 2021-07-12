@@ -1,14 +1,12 @@
 package com.zzz.springcloud.order.controller;
 
 import com.zzz.cloud.common.common.CommonResult;
-import com.zzz.cloud.common.entity.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 
 /**
@@ -28,7 +26,7 @@ public class OrderController {
     private RestTemplate restTemplate;
 
     @GetMapping("/consumer/pyment/list")
-    public CommonResult<List<Payment>> list(){
+    public CommonResult<Object> list(){
         return restTemplate.getForObject(PAYMENT_SERVER+"/payment/list", CommonResult.class);
     }
 }

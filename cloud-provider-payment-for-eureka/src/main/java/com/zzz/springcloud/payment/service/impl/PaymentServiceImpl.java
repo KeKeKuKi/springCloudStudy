@@ -1,7 +1,7 @@
 package com.zzz.springcloud.payment.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zzz.cloud.common.entity.Payment;
+import com.zzz.springcloud.payment.entity.Payment;
 import com.zzz.springcloud.payment.mapper.PaymentMapper;
 import com.zzz.springcloud.payment.service.IPaymentService;
 import org.springframework.stereotype.Service;

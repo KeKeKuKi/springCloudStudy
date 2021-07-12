@@ -4,6 +4,7 @@ import com.netflix.hystrix.HystrixCommandProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.zzz.cloud.common.common.CommonResult;
+import com.zzz.springcloud.payment.entity.Payment;
 import com.zzz.springcloud.payment.service.IPaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -34,8 +35,8 @@ public class PaymentController {
     private DiscoveryClient discoveryClient;
 
 
-    @GetMapping("list")
-    public CommonResult<Object> list() {
+    @GetMapping("/list")
+    public CommonResult<List<Payment>> list() {
         //故意暂停3秒
 //        TimeUnit.SECONDS.sleep(3);
         return CommonResult.ofSuccess(paymentService.list());
@@ -47,7 +48,7 @@ public class PaymentController {
     @HystrixCommand(fallbackMethod = "listSometimesErrorHandler", commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")
     })
-    @GetMapping("listSometimesError")
+    @GetMapping("/listSometimesError")
     public CommonResult<Object> listSometimesError() throws InterruptedException {
         if(Math.random() > 0.5){
             throw new RuntimeException("故意抛出的异常！");

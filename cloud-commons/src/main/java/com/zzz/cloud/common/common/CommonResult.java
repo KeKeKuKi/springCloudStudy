@@ -2,6 +2,8 @@ package com.zzz.cloud.common.common;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author ZhaoZezhong
  * @version V1.0
@@ -10,7 +12,7 @@ import lombok.Data;
  * @date 2021/6/2411:21
  */
 @Data
-public class CommonResult <T>{
+public class CommonResult <T> implements Serializable {
     private Integer code;
 
     private Boolean success;

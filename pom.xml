@@ -23,6 +23,7 @@
         <module>cloud-consumer-order-from-eureka-openfegin-hystrix-V2</module>
         <module>cloud-hystrix-admin</module>
         <module>cloud-gateaway</module>
+        <module>cloud-mybatis-common</module>
     </modules>
 
     <packaging>pom</packaging>

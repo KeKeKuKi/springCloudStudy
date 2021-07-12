@@ -13,7 +13,7 @@ spring:
       password: 123456
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.zzz.springcloud.payment.com.zzz.cloud.common.entity
+  type-aliases-package: com.zzz.springcloud.payment.com.zzz.springcloud.payment.entity
 
 eureka:
   instance:

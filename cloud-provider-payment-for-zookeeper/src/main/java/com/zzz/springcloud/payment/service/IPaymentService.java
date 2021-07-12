@@ -2,7 +2,7 @@ package com.zzz.springcloud.payment.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.zzz.cloud.common.entity.Payment;
+import com.zzz.springcloud.payment.payment.Payment;
 
 /**
  * <p>
