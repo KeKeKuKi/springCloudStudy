@@ -35,10 +35,10 @@ public class PaymentController {
 
 
     @GetMapping("list")
-    public CommonResult<Object> list() throws InterruptedException {
+    public CommonResult<Object> list() {
         //故意暂停3秒
-        TimeUnit.SECONDS.sleep(3);
-        return new CommonResult<>().ofSuccess(paymentService.list());
+//        TimeUnit.SECONDS.sleep(3);
+        return CommonResult.ofSuccess(paymentService.list());
     }
 
     /**
@@ -53,10 +53,10 @@ public class PaymentController {
             throw new RuntimeException("故意抛出的异常！");
         }
 //        TimeUnit.SECONDS.sleep(5);
-        return new CommonResult<>().ofSuccess(paymentService.list());
+        return CommonResult.ofSuccess(paymentService.list());
     }
     public CommonResult<Object> listSometimesErrorHandler() {
-        return new CommonResult<>().ofSuccess("paymentService.list() 调用异常，降级响应！" ) ;
+        return CommonResult.ofSuccess("paymentService.list() 调用异常，降级响应！" ) ;
     }
 
     /**

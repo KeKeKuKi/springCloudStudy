@@ -6,11 +6,17 @@ spring:
     name: cloud-gateaway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心开启动态路由功能，利用微服务名进行路由(自动负载均衡)
       routes:
-        - id: paymentList
-          uri: http://localhost:8001
+        - id: payment-server #路由ID
+#          uri: http://localhost:8001 #匹配后提供的路由地址 （不开启动态路由配置示例）
+          uri: lb://CLOUD-PROVIDER-PYMENT-FOR-EUREKA-HYSTRIX # 根据服务名路由，自动负载均衡
           predicates:
-            - Path=/payment/**
+            - Path=/payment/** #断言，需要匹配的路径·
+            - After=2021-07-12T13:01:00.500+08:00[Asia/Shanghai] #表示路径匹配 且 时间在这之后才路由（同理Before,Between）
+            # - Cookie=username,zzz #表示需要Cookie含有username为zzz才路由
 
 eureka:
   instance:
