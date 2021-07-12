@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      # 配置全路径为 http://localhost:3344/main/config-dev.yml
+      label: main
+      name: config
+      profile: dev
+      uri: http://localhost:3344
+
+      # bootstrap拉取远程配置进行启动
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

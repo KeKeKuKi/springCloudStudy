@@ -24,6 +24,8 @@
         <module>cloud-hystrix-admin</module>
         <module>cloud-gateaway</module>
         <module>cloud-mybatis-common</module>
+        <module>cloud-config-center</module>
+        <module>cloud-config-client</module>
     </modules>
 
     <packaging>pom</packaging>
