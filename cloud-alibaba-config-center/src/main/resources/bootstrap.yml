@@ -1,0 +1,16 @@
+server:
+  port: 3377
+spring:
+  application:
+    name: nacos-config-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 1.117.165.175:8848
+      config:
+        server-addr: 1.117.165.175:8848
+        file-extension: yaml
+        group: DEFAULT_GROUP
+
+# 配置拉取规则为 spring.application.name + "-" + spring.profile.active + spring.cloud.nacos.config.file-extension
+# 此处即为 nacos-config-center-dev.yaml

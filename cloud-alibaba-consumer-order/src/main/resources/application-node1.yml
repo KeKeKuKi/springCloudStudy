@@ -1,0 +1,15 @@
+server:
+  port: 83
+spring:
+  application:
+    name: order-consumer-nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 1.117.165.175:8848
+
+ribbon:
+  # 指建立连接的时间，网络正常情况下两端建立连接的时间
+  ReadTimeout: 5000
+  # 指建立连接后从服务端读取资源所用时间
+  ConnectTimeout: 5000

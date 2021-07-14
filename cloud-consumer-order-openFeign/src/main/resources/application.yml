@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-consumer-com.zzz.springcloud.order-from-eureka
+    name: cloud-consumer-order-from-eureka
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml

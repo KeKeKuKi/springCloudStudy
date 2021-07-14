@@ -22,7 +22,7 @@ import java.util.Scanner;
  *      pc.setParent 设置输出的包名(也即文件夹名)
  *      DataSourceConfig 设置数据源
  * -实体类使用lombok,swagger2，驼峰命名，去除is_前缀
- * -controller 使用rest风格
+ * -com.zzz.springcloud.controller 使用rest风格
  * -dao.xml生成resultMap和baseColumnList
  * @author gcl
  * @create 2019-09-17 14:51
