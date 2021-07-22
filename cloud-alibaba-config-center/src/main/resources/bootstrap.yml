@@ -14,3 +14,4 @@ spring:
 
 # 配置拉取规则为 spring.application.name + "-" + spring.profile.active + spring.cloud.nacos.config.file-extension
 # 此处即为 nacos-config-center-dev.yaml
+

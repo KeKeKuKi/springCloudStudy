@@ -1,0 +1,27 @@
+server:
+  port: 8401
+spring:
+  application:
+    name: cloud-centinel-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 1.117.165.175:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 1.117.165.175:8848
+            dataId: cloud-centinel-server
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
